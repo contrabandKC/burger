@@ -1,0 +1,24 @@
+{
+  "name": "burger",
+  "version": "1.0.0",
+  "description": "Burger app",
+  "main": "index.js",
+  "scripts": {
+    "test": "runtest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/contrabandKC/burger.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/contrabandKC/burger/issues"
+  },
+  "homepage": "https://github.com/contrabandKC/burger#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^5.3.4",
+    "mysql": "^2.18.1"
+  }
+}
