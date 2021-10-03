@@ -8,12 +8,13 @@
         
       <li> 
         <p> {{this.burger_name}} </p>  
-        <button data-id="{{this.id}}" >Devour it!</button>
+        <button class="devour-it" data-id="{{id}}" >Devour it!</button>
         </li>
     {{/unless}}
   {{/each}}
 </ul>
 
+<h2>Yummy!</h2>
 
 <ul>
   {{#each burgers}}
@@ -30,6 +31,6 @@
 <h2>Add Burger</h2>
 		<form action="/burgers/create" method="POST">
 				<input type="text" class="form-control" name="burger_name" value="" id="enter_text">
-				<button type="submit" class="btn btn-primary" id="text-enter-button">Submit</button>
+				<button type="submit" id="text-enter-button">Submit</button>
 			</form>
             			<p>Enter a burger you want to eat Click the "Submit" button.</p>

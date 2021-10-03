@@ -13,17 +13,15 @@ var orm = {
         });},
     
     insertOne: function(burger, cb){
-        var queryString = "INSERT INTO burgers (burger_name) VALUES ?"
-        connection.query(queryString, burger, function(err, result){
-            console.log("Test")
+        var queryString = "INSERT INTO burgers (burger_name) VALUES (?)"
+        connection.query(queryString, [burger], function(err, result){
+            console.log("orm insert one test" + burger)
             if (err) {
                 throw err;
               }
               cb(result);
              
-        });
-
-    },
+        });},
 
     updateOne: function(id, cb){
         var queryString = "UPDATE burgers SET devoured = true Where id=?"
