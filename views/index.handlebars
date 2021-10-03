@@ -1,0 +1,35 @@
+<h1>Burgers!</h1>
+
+<h2>Gimmie da burgers!</h2>
+
+<ul>
+  {{#each burgers}}
+    {{#unless  this.devoured}}
+        
+      <li> 
+        <p> {{this.burger_name}} </p>  
+        <button data-id="{{this.id}}" >Devour it!</button>
+        </li>
+    {{/unless}}
+  {{/each}}
+</ul>
+
+
+<ul>
+  {{#each burgers}}
+    {{#if  this.devoured}}
+        
+      <li> 
+        <p> {{this.burger_name}} </p>  
+        <button data-id="{{this.id}}" >clean table</button>
+        </li>
+    {{/if}}
+  {{/each}}
+</ul>
+
+<h2>Add Burger</h2>
+		<form action="/burgers/create" method="POST">
+				<input type="text" class="form-control" name="burger_name" value="" id="enter_text">
+				<button type="submit" class="btn btn-primary" id="text-enter-button">Submit</button>
+			</form>
+            			<p>Enter a burger you want to eat Click the "Submit" button.</p>
