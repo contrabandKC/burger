@@ -31,11 +31,22 @@ var orm = {
               }
               cb(result);
              
-        });
+        });},
+        delete: function(id, cb) {
+            var queryString = "DELETE FROM burgers where id=? " 
+            console.log(queryString)
+            connection.query(queryString, id, function(err, result) {
+              if (err) {
+                throw err;
+              }
         
-    }
+              cb(result);
+            });
+          }
 
-}
+
+    };
+
 
 
 

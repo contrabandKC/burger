@@ -19,6 +19,19 @@ $(document).ready(function() {
       );
     })
    
+    $(".clean-table").on("click", function(event){
+        var id = $(this).data("id");
+        console.log("cleaned " + id)
+
+        $.ajax("/burgers/" + id,{
+            type: "DELETE"
+        }).then(
+            function(){
+                console.log("deleted burger")
+                location.reload()
+            })
+        })
+
 })
 
 
